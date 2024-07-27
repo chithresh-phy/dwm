@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 5;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 1;    /* 0: systray in the right corner, >0: systray on left of status text */
@@ -60,10 +60,14 @@ static const Layout layouts[] = {
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
+#include <X11/XF86keysym.h>
+
 /* commands */
 static const char *rofidrun[] = { "rofi", "-show", "drun", NULL };
 static const char *rofirun[] = { "rofi", "-show", "run", NULL };
 static const char *termcmd[]  = { "xfce4-terminal", NULL };
+static const char *brightnessup[]  = { "brightnessup", NULL };
+static const char *brightnessdown[]  = { "brightnessdown", NULL };
 
 #include "movestack.c"
 static const Key keys[] = {
@@ -71,6 +75,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = rofidrun } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = rofirun } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ 0,          XF86XK_MonBrightnessUp,      spawn,          {.v = brightnessup } },
+	{ 0,        XF86XK_MonBrightnessDown,      spawn,          {.v = brightnessdown } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },

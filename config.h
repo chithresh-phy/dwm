@@ -69,16 +69,18 @@ static const char *termcmd[]  = { "xfce4-terminal", NULL };
 static const char *brightnessup[]  = { "brightnessup", NULL };
 static const char *brightnessdown[]  = { "brightnessdown", NULL };
 static const char *slockcmd[]  = { "slock", NULL };
+static const char *arandrcmd[]  = { "arandr", NULL };
 
 #include "movestack.c"
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = rofidrun } },
+	{ MODKEY,                       XK_a,      spawn,          {.v = rofidrun } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = rofirun } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
 	{ 0,          XF86XK_MonBrightnessUp,      spawn,          {.v = brightnessup } },
 	{ 0,        XF86XK_MonBrightnessDown,      spawn,          {.v = brightnessdown } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = arandrcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },

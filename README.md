@@ -9,7 +9,7 @@ This is my DWM Build with four patches:
 ### Dependencies:
 On a minimal Debian 12 install with amdgpu...
 ```console
-# apt install xserver-xorg-core xserver-xorg-video-amdgpu xinit xinput x11-xserver-utils build-essential make libx11-dev libxinerama-dev libxft-dev network-manager rofi xfce4-terminal arandr
+# apt install xserver-xorg-core xserver-xorg-video-amdgpu xinit xinput x11-xserver-utils build-essential make libx11-dev libxinerama-dev libxft-dev network-manager rofi xfce4-terminal arandr network-manager-gnome cbatticon
 ```
 
 #### Other Utils:

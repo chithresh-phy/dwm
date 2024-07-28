@@ -1,4 +1,4 @@
-## Chithresh's DWM Build
+## Chithresh's DWM Build based on dwm 6.5
 
 This is my DWM Build with four patches:
 1. Systray - [https://dwm.suckless.org/patches/systray/]

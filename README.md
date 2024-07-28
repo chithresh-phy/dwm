@@ -7,7 +7,12 @@ This is my DWM Build with four patches:
 4. MoveStack - [https://dwm.suckless.org/patches/movestack/]
 
 ### Dependencies:
-On a minimal Debian 12 install...
+On a minimal Debian 12 install with amdgpu...
 ```console
-# apt install
+# apt install xserver-xorg-core xserver-xorg-video-amdgpu xinit xinput x11-xserver-utils build-essential make libx11-dev libxinerama-dev libxft-dev network-manager
 ```
+
+#### Other Utils:
+
+1. Slock - [https://tools.suckless.org/slock/]
+2. Slstatus - [https://github.com/chithresh-phy/slstatus]

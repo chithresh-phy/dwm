@@ -5,3 +5,10 @@ This is my DWM Build with four patches:
 2. AlwaysCenter - [https://dwm.suckless.org/patches/alwayscenter/]
 3. CursorWarp - [https://dwm.suckless.org/patches/cursorwarp/]
 4. MoveStack - [https://dwm.suckless.org/patches/movestack/]
+
+### Dependencies:
+On a minimal Debian 12 install...
+
+'''console
+# apt install
+'''

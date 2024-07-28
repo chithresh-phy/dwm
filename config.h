@@ -16,11 +16,11 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_red[]        = "#782200";
+static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_red,  col_red  },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
 
 /* tagging */
@@ -68,6 +68,7 @@ static const char *rofirun[] = { "rofi", "-show", "run", NULL };
 static const char *termcmd[]  = { "xfce4-terminal", NULL };
 static const char *brightnessup[]  = { "brightnessup", NULL };
 static const char *brightnessdown[]  = { "brightnessdown", NULL };
+static const char *slockcmd[]  = { "slock", NULL };
 
 #include "movestack.c"
 static const Key keys[] = {
@@ -75,6 +76,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = rofidrun } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = rofirun } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
 	{ 0,          XF86XK_MonBrightnessUp,      spawn,          {.v = brightnessup } },
 	{ 0,        XF86XK_MonBrightnessDown,      spawn,          {.v = brightnessdown } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },

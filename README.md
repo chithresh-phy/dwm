@@ -9,10 +9,11 @@ This is my DWM Build with four patches:
 ### Dependencies:
 On a minimal Debian 12 install with amdgpu...
 ```console
-# apt install xserver-xorg-core xserver-xorg-video-amdgpu xinit xinput x11-xserver-utils build-essential make libx11-dev libxinerama-dev libxft-dev network-manager
+# apt install xserver-xorg-core xserver-xorg-video-amdgpu xinit xinput x11-xserver-utils build-essential make libx11-dev libxinerama-dev libxft-dev network-manager rofi xfce4-terminal arandr
 ```
 
 #### Other Utils:
 
 1. Slock - [https://tools.suckless.org/slock/]
 2. Slstatus - [https://github.com/chithresh-phy/slstatus]
+3. Brightness Scripts - [https://github.com/chithresh-phy/brightness-scripts]

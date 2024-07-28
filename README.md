@@ -8,7 +8,6 @@ This is my DWM Build with four patches:
 
 ### Dependencies:
 On a minimal Debian 12 install...
-
-'''console
+```console
 # apt install
-'''
+```
